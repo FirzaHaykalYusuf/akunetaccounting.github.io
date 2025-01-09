@@ -1609,67 +1609,79 @@ section,
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
-  padding: 30px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Shadow lebih lembut */
+  padding: 20px;
+  border-radius: 10px; /* Sudut lebih halus */
   position: relative;
   height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s; /* Tambahkan efek hover */
+}
+
+.testimonials .testimonial-item:hover {
+  transform: translateY(-5px); /* Efek melayang */
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15); /* Shadow saat hover */
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50px;
-  border: 6px solid var(--background-color);
-  float: left;
-  margin: 0 10px 0 0;
+  width: 100px; /* Sedikit lebih besar */
+  border-radius: 50%; /* Tetap bulat sempurna */
+  border: 4px solid var(--primary-color); /* Border lebih mencolok */
+  margin: 0 auto 15px auto; /* Posisikan di tengah */
+  display: block;
 }
 
 .testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px; /* Ukuran font lebih besar */
+  font-weight: 700; /* Font lebih tebal */
   margin: 10px 0 5px 0;
+  text-align: center; /* Teks rata tengah */
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--secondary-color); /* Gunakan warna sekunder */
   margin: 0;
+  text-align: center; /* Rata tengah */
 }
 
 .testimonials .testimonial-item .stars {
   margin: 10px 0;
+  text-align: center; /* Rata tengah untuk ikon bintang */
 }
 
 .testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
+  color: #ffc107; /* Warna bintang tetap kuning */
+  margin: 0 2px;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  font-size: 26px;
+  color: var(--accent-color); /* Warna lebih sesuai dengan tema */
+  font-size: 24px;
   line-height: 0;
 }
 
 .testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
+  position: absolute; /* Pindahkan ikon ke posisi luar */
+  top: 10px;
+  left: 15px;
 }
 
 .testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  transform: scale(-1, -1); /* Ikon tetap terbalik */
 }
 
 .testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 15px 0 0 0;
+  font-style: normal; /* Hapus italic untuk tampilan bersih */
+  margin: 20px 0 0 0; /* Tambahkan jarak atas */
   padding: 0;
+  text-align: justify; /* Teks rata kiri-kanan untuk estetika */
+  line-height: 1.6; /* Tingkatkan keterbacaan */
 }
+
 
 /*--------------------------------------------------------------
 # Stats Section
